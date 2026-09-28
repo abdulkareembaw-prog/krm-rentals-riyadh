@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroCar from "@/assets/hero-car.jpg";
+import logo from "@/assets/logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -46,9 +47,13 @@ function Index() {
       <header className="sticky top-0 z-40 border-b border-line/70 bg-frost/70 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <div className="flex items-center gap-3">
-            <span className="grid size-10 place-items-center rounded-xl bg-ink font-latin text-sm font-bold tracking-tight text-frost">
-              KRM
-            </span>
+            <img
+              src={logo}
+              alt="شعار KRM للتأجير"
+              width={40}
+              height={40}
+              className="size-10 rounded-xl ring-1 ring-line"
+            />
             <div className="leading-tight">
               <p className="text-sm font-bold">KRM للتأجير</p>
               <p className="text-[11px] text-ink-soft">الرياض</p>
@@ -288,7 +293,17 @@ function Index() {
 
       <footer className="border-t border-line">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-ink-soft sm:flex-row">
-          <p>© 2026 KRM للتأجير — الرياض</p>
+          <div className="flex items-center gap-2">
+            <img
+              src={logo}
+              alt="شعار KRM للتأجير"
+              width={28}
+              height={28}
+              loading="lazy"
+              className="size-7"
+            />
+            <p>© 2026 KRM للتأجير — الرياض</p>
+          </div>
           <p className="font-latin tracking-tight">KRM Rentals · Riyadh</p>
         </div>
       </footer>
