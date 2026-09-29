@@ -77,17 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "KRM للتأجير | تأجير سيارات في الرياض" },
+      { title: "KRM للتأجير | تأجير سيارات مرسيدس في الرياض" },
       {
         name: "description",
         content:
-          "KRM للتأجير — تأجير سيارات يومي وأسبوعي وشهري في الرياض. سيارات نظيفة، أسعار واضحة، وتسليم سريع. تواصل عبر واتساب 0556436548.",
+          "KRM للتأجير — نؤجّر سيارات مرسيدس حصرًا في الرياض. تأجير يومي وأسبوعي وشهري، سيارات نظيفة، أسعار واضحة، وتسليم سريع. تواصل عبر واتساب 0556436548.",
       },
-      { property: "og:title", content: "KRM للتأجير | تأجير سيارات في الرياض" },
+      { property: "og:title", content: "KRM للتأجير | تأجير سيارات مرسيدس في الرياض" },
       {
         property: "og:description",
         content:
-          "تأجير سيارات يومي وأسبوعي وشهري في الرياض مع تسليم سريع وأسعار واضحة.",
+          "KRM للتأجير — نؤجّر سيارات مرسيدس حصرًا في الرياض. تأجير يومي وأسبوعي وشهري، سيارات نظيفة، أسعار واضحة، وتسليم سريع. تواصل عبر واتساب 0556436548.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

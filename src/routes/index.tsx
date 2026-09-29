@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "تأجير سيارات مرسيدس حصرًا في الرياض — يومي وأسبوعي وشهري مع تسليم سريع وأسعار واضحة.",
+          "KRM للتأجير — نؤجّر سيارات مرسيدس حصرًا في الرياض. تأجير يومي وأسبوعي وشهري، سيارات نظيفة، أسعار واضحة، وتسليم سريع. تواصل عبر واتساب 0556436548.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
