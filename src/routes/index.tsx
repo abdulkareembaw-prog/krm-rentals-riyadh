@@ -1,21 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroCar from "@/assets/hero-car.jpg";
 import logo from "@/assets/logo.png";
+import galleryFront from "@/assets/gallery-front.jpg";
+import galleryInterior from "@/assets/gallery-interior.jpg";
+import galleryRear from "@/assets/gallery-rear.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "KRM للتأجير | تأجير سيارات في الرياض" },
+      { title: "KRM للتأجير | تأجير سيارات مرسيدس في الرياض" },
       {
         name: "description",
         content:
-          "KRM للتأجير — تأجير سيارات يومي وأسبوعي وشهري في الرياض. سيارات نظيفة، أسعار واضحة، وتسليم سريع. تواصل عبر واتساب 0556436548.",
+          "KRM للتأجير — نؤجّر سيارات مرسيدس حصرًا في الرياض. تأجير يومي وأسبوعي وشهري، سيارات نظيفة، أسعار واضحة، وتسليم سريع. تواصل عبر واتساب 0556436548.",
       },
-      { property: "og:title", content: "KRM للتأجير | تأجير سيارات في الرياض" },
+      { property: "og:title", content: "KRM للتأجير | تأجير سيارات مرسيدس في الرياض" },
       {
         property: "og:description",
         content:
-          "تأجير سيارات يومي وأسبوعي وشهري في الرياض مع تسليم سريع وأسعار واضحة.",
+          "تأجير سيارات مرسيدس حصرًا في الرياض — يومي وأسبوعي وشهري مع تسليم سريع وأسعار واضحة.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -56,7 +59,7 @@ function Index() {
             />
             <div className="leading-tight">
               <p className="text-sm font-bold">KRM للتأجير</p>
-              <p className="text-[11px] text-ink-soft">الرياض</p>
+              <p className="text-[11px] text-ink-soft">الرياض · مرسيدس فقط</p>
             </div>
           </div>
           <nav className="hidden items-center gap-8 text-sm text-ink-soft md:flex">
@@ -65,6 +68,9 @@ function Index() {
             </a>
             <a href="#services" className="transition-colors hover:text-ink">
               الخدمات
+            </a>
+            <a href="#gallery" className="transition-colors hover:text-ink">
+              المعرض
             </a>
             <a href="#contact" className="transition-colors hover:text-ink">
               تواصل
@@ -91,16 +97,16 @@ function Index() {
           <div className="lg:col-span-6">
             <span className="rise inline-flex items-center gap-2 rounded-full bg-frost/70 px-3 py-1 text-xs font-medium text-ink-soft ring-1 ring-line backdrop-blur">
               <span className="size-1.5 rounded-full bg-accent"></span>
-              تأجير سيارات في الرياض
+              متخصصون في تأجير سيارات مرسيدس فقط
             </span>
             <h1 className="rise mt-6 text-4xl font-bold leading-[1.15] tracking-tight text-balance sm:text-5xl lg:text-6xl">
-              سياراتك جاهزة،
+              مرسيدس جاهزة،
               <br />
               وأنت في طريقك.
             </h1>
             <p className="rise mt-6 max-w-[42ch] text-lg leading-relaxed text-ink-soft text-pretty">
-              KRM للتأجير توفّر لك سيارات نظيفة ومجهّزة بالكامل، بتسليم سريع
-              وسعر واضح، في قلب الرياض.
+              KRM للتأجير نؤجّر سيارات مرسيدس حصرًا — نظيفة ومجهّزة بالكامل،
+              بتسليم سريع وسعر واضح، في قلب الرياض.
             </p>
             <div className="rise mt-8 flex flex-wrap items-center gap-3">
               <a
@@ -113,24 +119,24 @@ function Index() {
                 تواصل عبر واتساب
               </a>
               <a
-                href="#services"
+                href="#gallery"
                 className="rounded-full bg-frost/70 px-6 py-3 text-sm font-semibold text-ink ring-1 ring-line backdrop-blur transition-colors hover:bg-frost"
               >
-                استعرض الخدمات
+                شاهد السيارة
               </a>
             </div>
             <div className="rise mt-10 flex gap-8 border-t border-line pt-6">
               <div>
-                <p className="font-latin text-2xl font-bold tracking-tight">120+</p>
-                <p className="text-xs text-ink-soft">سيارة في الأسطول</p>
+                <p className="font-latin text-2xl font-bold tracking-tight">100%</p>
+                <p className="text-xs text-ink-soft">مرسيدس حصرًا</p>
+              </div>
+              <div>
+                <p className="font-latin text-2xl font-bold tracking-tight">S500</p>
+                <p className="text-xs text-ink-soft">موديل 1996</p>
               </div>
               <div>
                 <p className="font-latin text-2xl font-bold tracking-tight">24/7</p>
                 <p className="text-xs text-ink-soft">دعم متواصل</p>
-              </div>
-              <div>
-                <p className="font-latin text-2xl font-bold tracking-tight">4.9</p>
-                <p className="text-xs text-ink-soft">تقييم العملاء</p>
               </div>
             </div>
           </div>
@@ -139,7 +145,7 @@ function Index() {
               <div className="absolute -inset-4 rounded-[28px] bg-accent/5"></div>
               <img
                 src={heroCar}
-                alt="سيارة سيدان حديثة في معرض أنيق بإطلالة على الرياض"
+                alt="مرسيدس S500 موديل 1996 بلون كحلي في استوديو بإطلالة هادئة"
                 width={1024}
                 height={768}
                 className="relative aspect-[4/3] w-full rounded-[24px] object-cover outline-1 -outline-offset-1 outline-black/5"
@@ -161,20 +167,20 @@ function Index() {
               نبذة
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance">
-              شريكك الموثوق على الطريق
+              مرسيدس فقط، بلا استثناء
             </h2>
           </div>
           <div className="lg:col-span-8">
             <p className="max-w-[52ch] text-lg leading-relaxed text-ink-soft text-pretty">
-              منذ انطلاقنا في الرياض، نؤمن أن التأجير يجب أن يكون بسيطًا
-              وشفافًا. نختار كل سيارة بعناية، ونجهّزها بأعلى معايير النظافة،
-              لنمنحك تجربة هادئة من لحظة الحجز حتى العودة.
+              نؤجّر سيارات مرسيدس حصرًا — ولا نؤجّر أي نوع آخر. اخترنا مرسيدس
+              لأنها تجمع الفخامة والاعتمادية، ونحرص على أن تصل كل سيارة نظيفة
+              ومجهّزة بالكامل، لتجربة هادئة من لحظة الحجز حتى العودة.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <div className="rounded-2xl bg-frost/70 p-5 ring-1 ring-line backdrop-blur">
-                <p className="text-sm font-semibold">سعر واضح</p>
+                <p className="text-sm font-semibold">مرسيدس حصرًا</p>
                 <p className="mt-1 text-sm text-ink-soft">
-                  بدون رسوم مخفية، تعرف التكلفة قبل الحجز.
+                  أسطولنا بالكامل من سيارات مرسيدس — لا شيء غيرها.
                 </p>
               </div>
               <div className="rounded-2xl bg-frost/70 p-5 ring-1 ring-line backdrop-blur">
@@ -196,7 +202,7 @@ function Index() {
               الخدمات
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance">
-              ثلاث طرق لرحلة مريحة
+              ثلاث طرق لتستأجر مرسيدسك
             </h2>
           </div>
           <p className="hidden text-sm text-ink-soft sm:block">
@@ -210,7 +216,7 @@ function Index() {
             </div>
             <h3 className="mt-5 text-xl font-bold tracking-tight">تأجير يومي</h3>
             <p className="mt-2 text-sm leading-relaxed text-ink-soft text-pretty">
-              سيارة نظيفة جاهزة ليومك، مع تسليم واستلام مرن في أي وقت.
+              مرسيدس نظيفة جاهزة ليومك، مع تسليم واستلام مرن في أي وقت.
             </p>
             <p className="mt-5 font-latin text-2xl font-bold tracking-tight">
               من 150 ر.س
@@ -246,6 +252,64 @@ function Index() {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section id="gallery" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-12">
+        <div className="mb-10 flex items-end justify-between">
+          <div>
+            <p className="font-latin text-xs font-medium uppercase tracking-[0.2em] text-accent">
+              المعرض
+            </p>
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance">
+              مرسيدس S500 · موديل 1996 · كحلي
+            </h2>
+          </div>
+          <p className="hidden text-sm text-ink-soft sm:block">
+            السيارة المتوفرة لدينا حاليًا.
+          </p>
+        </div>
+        <div className="grid gap-6 md:grid-cols-3">
+          <figure className="group overflow-hidden rounded-3xl bg-frost/70 ring-1 ring-line">
+            <img
+              src={galleryFront}
+              alt="الواجهة الأمامية لمرسيدس S500 كحلية موديل 1996"
+              width={1280}
+              height={720}
+              loading="lazy"
+              className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+            <figcaption className="px-5 py-4 text-sm text-ink-soft">
+              الواجهة الأمامية — الشبك الكروم وشعار النجمة
+            </figcaption>
+          </figure>
+          <figure className="group overflow-hidden rounded-3xl bg-frost/70 ring-1 ring-line">
+            <img
+              src={galleryInterior}
+              alt="المقصورة الداخلية لمرسيدس S500 بمقاعد جلدية فاتحة"
+              width={1280}
+              height={720}
+              loading="lazy"
+              className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+            <figcaption className="px-5 py-4 text-sm text-ink-soft">
+              المقصورة — جلد فاتح وخشب طبيعي
+            </figcaption>
+          </figure>
+          <figure className="group overflow-hidden rounded-3xl bg-frost/70 ring-1 ring-line">
+            <img
+              src={galleryRear}
+              alt="الواجهة الخلفية لمرسيدس S500 كحلية موديل 1996"
+              width={1280}
+              height={720}
+              loading="lazy"
+              className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+            <figcaption className="px-5 py-4 text-sm text-ink-soft">
+              الواجهة الخلفية — تصميم كلاسيكي أنيق
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-20">
         <div className="relative overflow-hidden rounded-[28px] bg-ink px-8 py-14 text-frost ring-1 ring-black/5">
@@ -259,7 +323,7 @@ function Index() {
                 جاهز للتحرك؟
               </h2>
               <p className="mt-4 max-w-[40ch] text-pretty text-frost/70">
-                أرسل رسالة على واتساب وسنرد عليك خلال دقائق لتأكيد الحجز.
+                أرسل رسالة على واتساب وسنرد عليك خلال دقائق لتأكيد حجز مرسيدسك.
               </p>
               <a
                 href={WHATSAPP_URL}
@@ -304,7 +368,7 @@ function Index() {
             />
             <p>© 2026 KRM للتأجير — الرياض</p>
           </div>
-          <p className="font-latin tracking-tight">KRM Rentals · Riyadh</p>
+          <p className="font-latin tracking-tight">KRM Rentals · Riyadh · Mercedes Only</p>
         </div>
       </footer>
 
