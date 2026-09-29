@@ -23,6 +23,39 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CarRental",
+          name: "KRM للتأجير",
+          description:
+            "تأجير سيارات مرسيدس حصرًا في الرياض — تأجير يومي وأسبوعي وشهري.",
+          url: "https://krm-rentals-riyadh.lovable.app/",
+          telephone: "+966556436548",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "الرياض",
+            addressCountry: "SA",
+          },
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday",
+            ],
+            opens: "00:00",
+            closes: "23:59",
+          },
+        }),
+      },
+    ],
   }),
   component: Index,
 });
