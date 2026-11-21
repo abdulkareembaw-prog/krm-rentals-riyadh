@@ -9,6 +9,8 @@ import {
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
+import { KrmShell } from "@/components/krm-shell";
+
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
@@ -18,9 +20,7 @@ function NotFoundComponent() {
       <div className="max-w-md text-center">
         <h1 className="text-7xl font-bold text-ink">404</h1>
         <h2 className="mt-4 text-xl font-semibold text-ink">الصفحة غير موجودة</h2>
-        <p className="mt-2 text-sm text-ink-soft">
-          الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
-        </p>
+        <p className="mt-2 text-sm text-ink-soft">الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
         <div className="mt-6">
           <Link
             to="/"
@@ -34,7 +34,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: { error: unknown; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -44,9 +44,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-mist px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-ink">
-          تعذّر تحميل الصفحة
-        </h1>
+        <h1 className="text-xl font-semibold tracking-tight text-ink">تعذّر تحميل الصفحة</h1>
         <p className="mt-2 text-sm text-ink-soft">
           حدث خطأ لدينا. يمكنك المحاولة مرة أخرى أو العودة للرئيسية.
         </p>
@@ -91,7 +89,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
- { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -134,7 +132,9 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <KrmShell>
+        <Outlet />
+      </KrmShell>
     </QueryClientProvider>
   );
 }

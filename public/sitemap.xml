@@ -3,4 +3,8 @@
   <url>
     <loc>https://krm-rentals-riyadh.lovable.app/</loc>
   </url>
+  <url><loc>https://krm-rentals-riyadh.lovable.app/rental</loc></url>
+  <url><loc>https://krm-rentals-riyadh.lovable.app/services</loc></url>
+  <url><loc>https://krm-rentals-riyadh.lovable.app/gallery</loc></url>
+  <url><loc>https://krm-rentals-riyadh.lovable.app/contact</loc></url>
 </urlset>
